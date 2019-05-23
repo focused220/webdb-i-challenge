@@ -43,7 +43,7 @@ server.put('/:id', async (req, res) =>{
 })
 
 server.delete('/:id', async (req, res) =>{
-    const {id} = req.params;
+    const {id} = req.params; 
     try{
         const removed = await db.remove(id)
         res.status(201).json(removed);
