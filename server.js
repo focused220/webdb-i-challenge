@@ -37,7 +37,7 @@ server.put('/:id', async (req, res) =>{
     const changes = req.body;
     console.log(id)
     try{
-        const update = await db.update(id, changes)
+        const update = await db.update(id, changes) 
         res.status(201).json(update)
     }catch(error){res.status(500).json(error)}
 })
